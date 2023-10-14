@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Detection System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #menu-container {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+        }
+
+        #menu {
+            width: 200px;
+            padding: 20px;
+        }
+
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #menu li {
+            margin: 10px 0;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #menu a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Smart Detection System</h1>
+    </div>
+
+    <div id="menu-container">
+        <div id="menu">
+            <h2>Authentication Methods</h2>
+            <ul>
+                <li><a href="#fingerprint">Fingerprint</a></li>
+                <li><a href="#facial-recognition">Facial Recognition</a></li>
+                <li><a href="#voice-recognition">Voice Recognition</a></li>
+                <li><a href="#touchscreen-biometrics">Touchscreen Biometrics</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div class="box" id="fingerprint">
+                <h2>Fingerprint Authentication</h2>
+                <p>Information about fingerprint authentication goes here.</p>
+            </div>
+
+            <div class="box" id="facial-recognition">
+                <h2>Facial Recognition</h2>
+                <p>Information about facial recognition authentication goes here.</p>
+            </div>
+
+            <div class="box" id="voice-recognition">
+                <h2>Voice Recognition</h2>
+                <p>Information about voice recognition authentication goes here.</p>
+            </div>
+
+            <div class="box" id="touchscreen-biometrics">
+                <h2>Touchscreen Biometrics</h2>
+                <p>Information about touchscreen biometrics goes here.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
