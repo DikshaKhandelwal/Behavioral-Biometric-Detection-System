@@ -1,0 +1,26 @@
+class AlarmSystem:
+    def __init__(self, threshold=0.1):
+        self.threshold = threshold
+
+    def analyze_data(self, data):
+        # Analyze the data to determine if it's an alarm or a false alarm
+        # You would implement this part based on your specific use case and data
+
+        # For simplicity, we'll assume data is a numeric value
+        if data > self.threshold:
+            return "Alarm"
+        else:
+            return "False Alarm"
+
+if __name__ == "__main__":
+    alarm_system = AlarmSystem()
+
+    # Simulated data - you would replace this with your real data source
+    data_values = [0.05, 0.12, 0.18, 0.09, 0.15, 0.05, 0.12, 0.25, 0.08, 0.12]
+
+    for data in data_values:
+        result = alarm_system.analyze_data(data)
+        if result == "Alarm":
+            print(f"Alarm Triggered: {data}")
+        elif result == "False Alarm":
+            print(f"False Alarm: {data}")
