@@ -1,0 +1,33 @@
+Pip install SpeechRecognition
+import speech_recognition as sr
+
+class VoiceRecognitionBiometrics:
+    def __init__(self):
+        self.recognizer = sr.Recognizer()
+
+    def capture_voice_input(self):
+        with sr.Microphone() as source:
+            print("Please speak your passphrase...")
+            audio = self.recognizer.listen(source)
+        return audio
+
+    def verify_user_voice(self, audio, expected_passphrase):
+        try:
+            recognized_text = self.recognizer.recognize_google(audio)
+            if recognized_text.lower() == expected_passphrase.lower():
+                return "Voice recognized, likely legitimate user"
+            else:
+                return "Voice recognition failed, possible unauthorized access"
+        except sr.UnknownValueError:
+            return "Voice recognition failed, could not understand audio"
+        except sr.RequestError as e:
+            return f"Voice recognition failed, request error: {e}"
+
+if __name__ == "__main__":
+    voice_recognition_system = VoiceRecognitionBiometrics()
+    expected_passphrase = "YourSecretPassphrase"
+
+    audio_input = voice_recognition_system.capture_voice_input()
+    result = voice_recognition_system.verify_user_voice(audio_input, expected_passphrase)
+
+    print(result)
