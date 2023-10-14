@@ -1,0 +1,19 @@
+# Define FAR (False Acceptance Rate) and FRR (False Rejection Rate)
+FAR = 0.05  # Example FAR
+FRR = 0.10  # Example FRR
+
+# Initialize variables
+threshold = 0.0  # Initialize the threshold
+EER = None
+
+# Search for the threshold that minimizes the EER
+while threshold <= 1.0:
+    if threshold <= FAR and threshold >= FRR:
+        EER = threshold
+        break
+    threshold += 0.001  # Adjust the step size based on the precision you need
+
+if EER is not None:
+    print(f"Equal Error Rate (EER): {EER:.2%}")
+else:
+    print("EER not found within the range of FAR and FRR.")
